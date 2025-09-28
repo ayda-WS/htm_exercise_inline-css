@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 
 <!--
-43 - 48
+49 - 51
 -->
 
 <html> 
@@ -27,8 +27,17 @@
 
     .card {border: 1px solid #ccc; border-radius: 5px; padding: 20px; width: 250px; margin: 10px auto; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); } 
 
-     .modal {display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 1px solid black; } 
+    .modal {display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 1px solid black; } 
     .modal.show {display: block; } 
+
+    .row {display: flex; } 
+    .col {flex: 1; margin: 5px; padding: 20px; background: lightblue; }
+
+    .dropdown {position: relative; display: inline-block; } 
+    .dropdown-content {display: none; position: absolute; background: white; border: 1px solid #ccc; min-width: 120px; } 
+    .dropdown:hover .dropdown-content {display: block; } 
+
+     .center {display: flex; justify-content: center; align-items: center; height: 100vh; } 
     
   </style> 
   
@@ -70,6 +79,26 @@
   <div id="myModal" class="modal"> 
     <p> This is a modal! </p> 
   </div>
+
+   <div class="row"> 
+    <div class="col"> Column 1 </div> 
+    <div class="col"> Column 2 </div> 
+    <div class="col"> Column 3 </div> 
+  </div>
+
+    <div class="dropdown"> 
+    <button> Menu </button> 
+    <div class="dropdown-content"> 
+      <p> Option 1 </p> 
+      <p> Option 2 </p> 
+    </div> 
+  </div>
+
+   <div class="center"> 
+    <h1> Centered Text </h1> 
+   </div> 
+
+  
   
 </body> 
 </html>
